@@ -87,8 +87,19 @@ img {
   font-weight: 700;
   padding-left: 40px;
 }
+
 .bottom_navbar_container_list1 {
+  position: absolute;
+  top: 20px;
+  left: 100px;
+
+  margin-top: 20px;
+  padding: 30px;
   justify-content: space-around;
+  height: 400px;
+
+  transition-property: all;
+  transition-duration: 5s;
 }
 .botton_navbar_menu_container {
   justify-content: space-evenly;
