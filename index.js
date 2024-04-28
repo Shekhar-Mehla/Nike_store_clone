@@ -195,7 +195,6 @@ hovweritem.forEach((item, index) => {
   const display = () => {
     switch (index) {
       case 0: {
-        console.log("hello");
         document.querySelector(".bottom_navbar_menu").innerHTML = hello();
         break;
       }
@@ -230,4 +229,9 @@ hovweritem.forEach((item, index) => {
 
   item.addEventListener("mouseover", display);
   item.addEventListener("mouseout", Hidedisplay);
+});
+window.addEventListener("load", () => {
+  const itm1 = document.querySelector(".badge_item1");
+
+  let itm2 = document.querySelector(".badge_item2");
 });

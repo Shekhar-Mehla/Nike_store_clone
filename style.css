@@ -22,6 +22,9 @@ a {
   width: 80%;
   margin: auto;
 }
+.wrapper {
+  overflow-x: hidden;
+}
 /* navsection statrts here */
 .top_navbar_wrapper {
   background-color: lightgrey;
@@ -60,6 +63,8 @@ img {
 }
 .bottom_navbar .nav_container a:hover {
   border-bottom: 3px solid black;
+  display: none;
+  opacity: 0;
 }
 .right_navbar_container {
   align-items: center;
@@ -97,9 +102,6 @@ img {
   padding: 30px;
   justify-content: space-around;
   height: 400px;
-
-  transition-property: all;
-  transition-duration: 5s;
 }
 .botton_navbar_menu_container {
   justify-content: space-evenly;
@@ -113,4 +115,44 @@ img {
   display: block;
   font-size: 20px;
   font-weight: 500;
+}
+/* badge css */
+.badge {
+  height: 50px;
+  background-color: red;
+}
+.badge_item1 {
+  flex-direction: column;
+}
+.badge_item2 {
+}
+.main_item1 {
+  background-image: url("./assessts/optimized.jpg");
+  padding: 100vh;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 80%;
+}
+.main_item2 {
+  padding: 100px 5px;
+}
+.main_item2 > article {
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+.main_item2 > article > h2 {
+  font-family: "Prompt", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 60px;
+}
+.main_item2 > article > span a {
+  background-color: black;
+  color: aliceblue;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
 }
