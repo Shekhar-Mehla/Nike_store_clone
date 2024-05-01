@@ -118,12 +118,16 @@ img {
 }
 /* badge css */
 .badge {
+  position: relative;
   height: 50px;
   background-color: red;
 }
 .badge_item1 {
+  position: absolute;
   flex-direction: column;
+  left: 10vw;
 }
+
 .badge_item2 {
 }
 .main_item1 {

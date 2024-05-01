@@ -230,8 +230,21 @@ hovweritem.forEach((item, index) => {
   item.addEventListener("mouseover", display);
   item.addEventListener("mouseout", Hidedisplay);
 });
-window.addEventListener("load", () => {
-  const itm1 = document.querySelector(".badge_item1");
 
-  let itm2 = document.querySelector(".badge_item2");
+// handle badge on load
+const newspaperSpinning = [
+  { transform: "rotate(0) scale(1)" },
+  { transform: "rotate(360deg) scale(0)" },
+];
+
+const newspaperTiming = {
+  duration: 2000,
+  iterations: 1,
+};
+
+const newspaper = document.querySelector(".badge_item1");
+console.log(newspaper);
+
+newspaper.addEventListener("click", () => {
+  newspaper.animate(newspaperSpinning, newspaperTiming);
 });
