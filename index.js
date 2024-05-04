@@ -1,6 +1,4 @@
-const New_feature = document.querySelectorAll(
-  ".bottom_navbar .nav_container a"
-);
+const New_feature = document.querySelectorAll(".bottom_navbar .nav_container ");
 const hello = () => {
   const arrayobj = [
     {
@@ -46,6 +44,7 @@ const hello = () => {
     },
   ];
   const fisrlist = arrayobj.map((item) => {
+    console.log(item);
     return `
     <div class="bottom_navbar_container_list1 flex container">
     <div class="bottom_navbar_menu_list">
@@ -196,6 +195,7 @@ hovweritem.forEach((item, index) => {
     switch (index) {
       case 0: {
         document.querySelector(".bottom_navbar_menu").innerHTML = hello();
+        
         break;
       }
       case 1: {
@@ -237,14 +237,24 @@ const newspaperSpinning = [
   { transform: "rotate(360deg) scale(0)" },
 ];
 
-const newspaperTiming = {
-  duration: 2000,
-  iterations: 1,
-};
+countClick = 0;
 
-const newspaper = document.querySelector(".badge_item1");
-console.log(newspaper);
+const galleryScrollButtons = document.querySelectorAll(
+  ".glallerysection .topdiv .button div "
+);
 
-newspaper.addEventListener("click", () => {
-  newspaper.animate(newspaperSpinning, newspaperTiming);
+galleryScrollButtons.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    if (index === 0 && countClick >= -3) {
+      const buttondiv = document.querySelector(".bottomdiv");
+      buttondiv.style.transform = `translateX(${30 * countClick}vw)`;
+      countClick--;
+    } else if (index === 1 && countClick < 0) {
+      countClick++;
+
+      const buttondiv = document.querySelector(".bottomdiv");
+      buttondiv.style.transform = `translateX(${30 * countClick}vw)`;
+    }
+    console.log(countClick);
+  });
 });
