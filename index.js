@@ -138,7 +138,9 @@ const Men = () => {
   ];
   const fisrlist = arrayobj.map((item) => {
     return `
-    <div class="bottom_navbar_container_list1 flex container">
+    <div class="bottom_navbar_container_list1
+    
+    flex container">
     <div class="bottom_navbar_menu_list">
       <title>${item.firstobj.Title}</title>
       <div class="bottom_navbar_menu_list_item">${item.firstobj.item1}</div>
